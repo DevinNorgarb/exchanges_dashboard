@@ -1,4 +1,4 @@
-version: '3.5'
+eversion: '3.5'
 services:
   scraper:
     build: .
@@ -10,9 +10,7 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
   metabase-app:
-    build:
-      context: .
-      dockerfile: Dockerfile.metabase    
+    build: metabase_rpi 
     container_name: metabase
     hostname: metabase
     volumes:
